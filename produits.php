@@ -11,7 +11,7 @@ require_once "tab.php";
             <?php foreach($articles as $index => $booknook) : ?>
                 <article>
                     <div>
-                        <img src="$booknook['image1']" alt="$booknook['nom']">
+                        <img src="<?=$booknook['image1']?>" alt="<?=$booknook['nom']?>">
                     </div>
                     <div>
                         <p><span><?= $booknook['nom'] ?></span></p>

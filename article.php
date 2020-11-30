@@ -5,6 +5,7 @@ $articles = $articles[$_GET["art"]];
 
 ?>
 
+
 <section>
     <article class="article">
         <div>
@@ -23,7 +24,10 @@ $articles = $articles[$_GET["art"]];
             <p><?= $articles['dimension'] ?></p>
             <b>€<?= $articles['prix'] ?>.00</b> <br>
             <input type="submit" value="Ajouter au panier" id="ajoutpanier">
+            
         </div>
+
+        <a href="index.php?page=home"><input type="submit" value="Retouner à la liste des produits" id="retourliste"></a></p>
 
 
     </article>

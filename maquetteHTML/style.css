@@ -84,7 +84,7 @@ header img{
     font-size: 1.5rem;
 }
 
-#acheter, #ajoutpanier {
+#acheter, #ajoutpanier, #retourliste {
     margin: 0.5rem;
     padding: 0.7rem;
     border-radius: 8px ;
@@ -94,9 +94,11 @@ header img{
     box-shadow: 1px 1px 2px black;
 }
 
-#acheter:active, #ajoutpanier:active {
+#acheter:active, #ajoutpanier:active, #retourliste:active {
     box-shadow: 1px 1px 3px inset black;
 }
+
+
 
 
 /* page article */
