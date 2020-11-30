@@ -1,0 +1,99 @@
+/* général */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bolder;
+}
+
+b {
+    color: rgb(241, 110, 110);
+}
+
+/* header */
+
+
+header img{
+    width: 100vw;
+    max-height: 100vh;
+}
+
+.headerimg {
+    position: relative;
+}
+
+.legende {
+    position: absolute;
+    color: rgb(241, 110, 110);
+    width: 100vw;
+    margin-top: 5vw;
+    text-shadow: 2px 2px 3px rgb(29, 27, 27);
+    }
+
+.legende h1 {
+    font-size: 7vw;
+}
+
+.legende h2 {
+    font-size: 4vw;
+}
+
+/* les produits */
+
+.murproduit {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.murproduit article {
+    display: flex;
+    flex-direction: column;
+    justify-content : space-evenly;
+    width: 20vw;
+    min-width: 250px;
+    max-width: 300px;
+    box-shadow: 1px 1px 3px black;
+    margin: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.murproduit article img {
+    width: 20vw;
+    min-width: 200px;
+    max-width: 250px;
+    height: 30vh;
+    margin: auto;
+}
+
+.produit h1 {
+    margin: 2vw;
+    font-size: 5vw;
+    color: rgb(241, 110, 110);
+}
+
+
+.produit span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#acheter {
+    margin: 0.5rem;
+    padding: 0.7rem;
+    border-radius: 8px ;
+    border: none;
+    color : rgb(241, 110, 110);
+    background-color:rgb(247, 164, 164);
+    box-shadow: 1px 1px 2px black;
+}
+
+#acheter:active {
+    box-shadow: 1px 1px 3px inset black;
+}
