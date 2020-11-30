@@ -79,12 +79,12 @@ header img{
 }
 
 
-.produit span {
+.produit span, .article span {
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-#acheter {
+#acheter, #ajoutpanier {
     margin: 0.5rem;
     padding: 0.7rem;
     border-radius: 8px ;
@@ -94,6 +94,41 @@ header img{
     box-shadow: 1px 1px 2px black;
 }
 
-#acheter:active {
+#acheter:active, #ajoutpanier:active {
     box-shadow: 1px 1px 3px inset black;
+}
+
+
+/* page article */
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content : space-evenly;
+    width: 55vw;
+    box-shadow: 1px 1px 3px black;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.article img {
+    width: 40vw;
+    height: 30vh;
+    margin: auto;
+}
+
+
+.listimg {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40vw;
+    margin: auto;
+    
+}
+
+.listimg img {
+    width : 30%;
+    height: auto;
+    margin: 0.5rem;
 }
