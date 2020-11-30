@@ -1,5 +1,7 @@
 
-
+<?php 
+require_once "tab.php"
+?>
 
 
     <section class="produit">
@@ -10,10 +12,10 @@
                     <img src="maquetteHTML/booknookHPnuit.jpg" alt="booknook Harry Potter">
                 </div>
                 <div>
-                    <p><span>Booknook Harry Potter</span></p>
-                    <p>Entrez dans l'univers Harry Potter, en faisait un saut dans le chemin de traverse...</p>
-                    <b>€125.00</b> <br>
-                    <input type="submit" value="Acheter maintenant" id="acheter">
+                    <p><span><?= $HarryPotter['nom'] ?></span></p>
+                    <p><?= $HarryPotter['description'] ?></p>
+                    <b>€<?= $HarryPotter['prix'] ?>.00</b> <br>
+                    <a href="index.php?page=article"><input type="submit" value="Acheter maintenant" id="acheter"></a>
                 </div>
             </article>
             <article>
@@ -21,10 +23,10 @@
                     <img src="maquetteHTML/booknooknoelnuit.jpg" alt="booknook edition de noël">
                 </div>
                 <div>
-                    <p><span>Booknook Edition de Noël</span></p>
-                    <p>Changer de thème en fonction des saisons...</p>
-                    <b>€24.00</b> <br>
-                    <input type="submit" value="Acheter maintenant" id="acheter">
+                    <p><span><?= $Noel['nom'] ?></span></p>
+                    <p>C<?= $Noel['description'] ?></p>
+                    <b>€<?= $Noel['prix'] ?>.00</b> <br>
+                    <a href="index.php?page=article"><input type="submit" value="Acheter maintenant" id="acheter"></a>
                 </div>
             </article>
             <article>
@@ -32,10 +34,10 @@
                     <img src="maquetteHTML/boonookhalloweennuit.jpg" alt="booknook edition Halloween">
                 </div>
                 <div>
-                    <p><span>Booknook Edition spécial Halloween</span></p>
-                    <p>Changer de thème en fonction des saisons...</p>
-                    <b>€22.00</b> <br>
-                    <input type="submit" value="Acheter maintenant" id="acheter">
+                    <p><span><?= $Halloween['nom'] ?></span></p>
+                    <p><?= $Halloween['description'] ?></p>
+                    <b>€<?= $Halloween['prix'] ?>.00</b> <br>
+                    <a href="index.php?page=article"><input type="submit" value="Acheter maintenant" id="acheter"></a>
                 </div>
             </article>
             <article>
@@ -43,10 +45,10 @@
                     <img src="maquetteHTML/booknookruelle.jpg" alt="booknook vielle ruelle londonnienne">
                 </div>
                 <div>
-                    <p><span>Booknook Vielle ruelle Londonnienne</span></p>
-                    <p>Faites un voyage dans le vieux Londre...</p>
-                    <b>€95.00</b> <br>
-                    <input type="submit" value="Acheter maintenant" id="acheter">
+                    <p><span><?= $Londre['nom'] ?></span></p>
+                    <p><?= $Londre['description'] ?></p>
+                    <b>€<?= $Londre['prix'] ?>.00</b> <br>
+                    <a href="index.php?page=article"><input type="submit" value="Acheter maintenant" id="acheter"></a>
                 </div>
             </article>
             <article>
@@ -54,10 +56,10 @@
                     <img src="maquetteHTML/booknookLOTRgollum.jpg" alt="booknook seigneur des anneaux">
                 </div>
                 <div>
-                    <p><span>Booknook Seigneur des anneaux</span></p>
-                    <p>Entrez dans l'univers du seigneur des anneaux, en faisait sortir de vos livre le célèbre Gollum. Existe aussi en version Gandalf</p>
-                    <b>€99.00</b> <br>
-                    <input type="submit" value="Acheter maintenant" id="acheter">
+                    <p><span><?= $LOTR['nom'] ?></span></p>
+                    <p><?= $LOTR['description'] ?></p>
+                    <b>€<?= $LOTR['prix'] ?>.00</b> <br>
+                    <a href="index.php?page=article"><input type="submit" value="Acheter maintenant" id="acheter"></a>
                 </div>
             </article>
         </div>
