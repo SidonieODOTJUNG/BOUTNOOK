@@ -134,3 +134,38 @@ header img{
     height: auto;
     margin: 0.5rem;
 }
+
+/* formulaire */
+
+.creacompte {
+    border: 3px solid black;
+    text-align: center;
+    margin : 2rem;
+    padding: 2rem;
+}
+
+
+.creacompte input{
+    margin : 2rem;
+}
+
+
+/* panier */
+
+.prespanier{
+    text-align: center;
+}
+
+.panier {
+    display: flex;
+    justify-content : space-evenly;
+    width: 55vw;
+    box-shadow: 1px 1px 3px black;
+    margin: auto;
+    padding: 3rem;
+    text-align: center;
+}
+#imgpanier {
+    width: 10%;
+    height: auto;
+}
