@@ -1,15 +1,10 @@
+<?php
 
-<?php 
 
-// session_start();
 
-// $_SESSION['utilisateur'] = '';
-
-// // destruction lorsque l'utilisateur clique sur déco (il faut pense à permettre à l'utilisateur de se déco)
-// $_SESSION = array(); // on réinitialise $_SESSION (tableau vide)
-// session_destroy(); // on detruit la session (attention cela surpprime tout donc seulement quand l'utilisateur le décide)
-// unset($_SESSION) ;  //on supprime le tableau session (tout en gardant le principe de la session)
-
+session_start();
+$_SESSION['user'] = "Durant";
+$_SESSION['mdp'] = "DD1";
 
 $page = (isset($_GET["page"]))? $_GET["page"] : "home";
 
@@ -18,11 +13,55 @@ switch($page) {
     break;
     case "article" : $template = "article.php";
     break;
-    case "panier" : $template = "panier.php";
-    break;
     case "connexion" : $template = "connexion.php";
     break;  
+    case "deconnexion" : $template = deconnect();
+    break;
+    case "panier" : $template = connect();
+    break;
+    case "ajout" : $template = ajoutPanier();
+    break;
     default : $template = "produits.php";
+    }
+
+
+    function connect() {
+    
+        if(isset($_POST['nom'])) {
+            $_SESSION["user"] = $_POST['nom'];
+        }
+    
+        if(isset($_SESSION["user"])) {
+            return "panier.php";
+        } else {
+            return "connexion.php";
+        }
+    
+    }
+    
+    function deconnect() {
+    
+        $_SESSION = [];
+        session_destroy();
+    
+        return "produits.php";
+    }
+    
+    function ajoutPanier() {
+
+        $article = $_GET['art'];
+
+        if(isset($_SESSION['panier'])) {
+            // j'ajoute un produit (array push php)
+            array_push($_SESSION['panier'], $article);
+        } else {
+            $_SESSION['panier'] = [];
+            // et j'ajoute un produit
+            array_push($_SESSION['panier'], $article);
+        }
+
+        return "article.php";
+        
     }
 ?>
 
@@ -41,7 +80,18 @@ switch($page) {
                 <h1>BOUTNOOKS</h1>
                 <h2>Faites vivre une aventure à vos livres...</h2>
             </div>
+
             <img src="maquetteHTML/bookheader.jpg" alt="livre accueil BOUTNOOKS">
+
+            <div>
+
+                <?php if(!isset($_SESSION["user"])): ?>
+                    <a href="index.php?page=connexion">Connexion</a>
+                <?php else: ?>
+                    <a href="index.php?page=deconnexion">Déconnexion</a>
+                    <a href="index.php?page=panier">Mon panier</a>
+                <?php endif ?>
+            </div>
         </div>
     </header>
 
@@ -49,3 +99,5 @@ switch($page) {
     <?php require_once $template ?>
 </body>
 </html>
+
+

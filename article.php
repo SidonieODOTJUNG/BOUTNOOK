@@ -1,6 +1,7 @@
 <?php
 
 require_once "tab.php";
+$indice = (isset($_GET["art"]))? $_GET["art"] : 0;
 $articles = $articles[$_GET["art"]];
 
 ?>
@@ -23,7 +24,7 @@ $articles = $articles[$_GET["art"]];
             <p><?= $articles['stock'] ?> articles en stock</p>
             <p><?= $articles['dimension'] ?></p>
             <b>€<?= $articles['prix'] ?>.00</b> <br>
-            <a href="index.php?page=connexion"><input type="submit" value="Ajouter au panier" id="ajoutpanier"></a>
+            <a href="index.php?page=ajout&art=<?= $indice ?>"><input type="submit" value="Ajouter au panier" id="ajoutpanier"></a>
             
             
         </div>
